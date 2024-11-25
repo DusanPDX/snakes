@@ -1,0 +1,8 @@
+{% extends "default.html" %}
+{% block title %}Dangerous snake:"{{ snake.get_name() }}", Scientific Name: {{ snake.get_scientific_name() }}
+    Created{% endblock %}
+{% block header %}Dangerous snake:"{{ snake.get_name() }}", Scientific Name: {{ snake.get_scientific_name() }}
+    Created{% endblock %}
+{% block content %}
+<p>{{ snake.to_html()|safe }}</p>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "default.html" %}
+{% block title %}Dusko Snakes Homepage{% endblock %}
+{% block header %}Please select an option from the choices listed below:{% endblock %}
+{% block content %}
+{% for group_key in options %}
+{% set option_dict = options[group_key] %}
+<h2>{{ group_key }}</h2>
+<ul>
+     {%  for route in option_dict %}
+     <li><a href="/{{ route }}">{{ option_dict[route]}}</a></li>
+     {% endfor %}
+    <!-- Comment -->
+</ul>
+{% endfor %}
+{% endblock %}

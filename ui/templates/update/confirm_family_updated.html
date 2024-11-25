@@ -1,0 +1,7 @@
+{% extends "default.html" %}
+{% block title %}Snake Family Updated{% endblock %}
+{% block header %}{{ snake.get_printable_key() }} successfully updated!{% endblock %}
+{% block content %}
+<p>The family was successfully updated!</p>
+{{ snake.to_html()|safe }}
+{% endblock %}

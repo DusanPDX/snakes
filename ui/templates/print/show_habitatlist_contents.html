@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+{% block title %}Select a habitatlist and show the contents{% endblock %}
+{% block header %}Select a habitatlist (snake habitat) and show snakes in that habitat{% endblock %}
+{% block content %}
+    <form method="GET" action="print_habitatlist">
+    <table class="data_entry_form">
+        <tr><th><label>Habitatlist:</label></th><td>
+            {% set select_habitat_name= "habitatlist" %}
+            {% include "select_habitatlist.html" %}
+        </td></tr>
+        <tr><th colspan="2"><button type="submit">SHOW</button></th></tr>
+    </table>
+    </form>
+{% endblock %}

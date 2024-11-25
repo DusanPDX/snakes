@@ -1,0 +1,15 @@
+{% extends "default.html" %}
+{% block title %}Create New Snake {% endblock %}
+{% block header %}Please fill out form below to create a new non-dangerous Snake:{% endblock %}
+{% block content %}
+    <form method="POST" action="do_create_snake">
+    <table class="data_entry_form">
+        <tr><th><label>Name:</label></th><td><input type="text" name="name"></td></tr>
+        <tr><th><label>Scientific Name:</label></th><td><input type="text" name="scientific_name"></td></tr>
+        <tr><th><label>Family:</label></th><td><input type="text" name="family"></td></tr>
+        <tr><th><label>Genus:</label></th><td><input type="text" name="genus"></td></tr>
+        <tr><th><label>Species:</label></th><td><input type="text" name="species"></td></tr>
+        <tr><th colspan="2"><button type="submit">CREATE</button></th></tr>
+    </table>
+    </form>
+{% endblock %}

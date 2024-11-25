@@ -1,0 +1,5 @@
+<select name="{{ select_snake_name }}">
+     {% for snake in snakes %}
+     <option value="{{ snake.get_key() }}">{{ snake.get_printable_key() }}</option>
+     {% endfor %}
+</select>

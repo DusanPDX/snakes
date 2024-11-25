@@ -1,0 +1,12 @@
+{% extends "default.html" %}
+{% block title %}{{ habitatlist.get_habitat_name() }} Habitatlist{% endblock %}
+{% block header %}{{ habitatlist.get_habitat_name() }} Habitatlist{% endblock %}
+{% block content %}
+<p>{{ habitatlist.get_geographic_location() }}</p>
+<h2>Snakes in this habitatlist include the following:</h2>
+<ul>
+{% for snake in habitatlist %}
+<li>{{ snake.to_html()|safe }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "default.html" %}
+{% block title %}Join Two Habitatlists Together{% endblock %}
+{% block header %}Select two habitats to join together: {% endblock %}
+{% block content %}
+    <form method="POST" action="do_join_habitatlists">
+    <table class="data_entry_form">
+        <tr><th><label>First Habitatlist:</label></th><td>
+            {% set select_habitat_name= "first_habitatlist" %}
+            {% include "select_habitatlist.html" %}
+        </td></tr>
+        <tr><th><label>Second Habitatlist:</label></th><td>
+            {% set select_habitat_name= "second_habitatlist" %}
+            {% include "select_habitatlist.html" %}
+        </td></tr>
+        <tr><th colspan="2"><button type="submit">JOIN</button></th></tr>
+    </table>
+    </form>
+{% endblock %}

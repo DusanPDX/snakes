@@ -1,0 +1,16 @@
+{% extends "default.html" %}
+{% block title %}Select a snake and update family {% endblock %}
+{% block header %}Select a snake and update the snake's family:{% endblock %}
+{% block content %}
+    <form method="POST" action="do_update_snake_family">
+    <table class="data_entry_form">
+        <tr><th><label>Snake:</label></th><td>
+            {% set select_snake_name= "snake" %}
+            {% include "select_snake.html" %}
+        </td></tr>
+        <tr><th><label>Family:</label></th><td>
+            <input type="text" name="family"></td></tr>
+        <tr><th colspan="2"><button type="submit">UPDATE</button></th></tr>
+    </table>
+    </form>
+{% endblock %}

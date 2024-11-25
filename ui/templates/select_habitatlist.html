@@ -1,0 +1,5 @@
+<select name="{{ select_habitat_name }}">
+     {% for habitatlist in habitatlists %}
+     <option value="{{ habitatlist.get_key() }}">{{ habitatlist.get_habitat_name() }}</option>
+     {% endfor %}
+</select>

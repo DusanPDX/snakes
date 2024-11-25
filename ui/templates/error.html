@@ -1,0 +1,9 @@
+{% extends "default.html" %}
+{% block title %}Error!{% endblock %}
+{% block header %}{{ message_header}}{% endblock %}
+{% block image %}
+    <img src="https://static.thenounproject.com/png/203603-200.png"
+                      alt="sad_computer" width="500" height="400"> {% endblock %}"
+{% block content %}
+<p>{{ message_body }}</p>
+{% endblock %}

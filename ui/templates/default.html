@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%  block title %}Default Text {% endblock %}</title>
+    <link rel="stylesheet" href="static/dusko_snakes.css"
+</head>
+<body>
+{% if "user" in session %}
+<div class="top_button"><a href="/logout">Logout</a></div>
+<div class="top_button">{{ session["user"].get_username() if "user" in session}}</div>
+{% endif %}
+<h1>{% block header %}Default Header Text:{% endblock %}</h1>
+{% block image %}<img src="https://reptile-savvy.weebly.com/uploads/1/1/6/5/1165347/9486499_orig.jpg"
+                      alt="snakes" width="500" height="400"> {% endblock %}
+{% block content %}
+<p>Default Content</p>
+{% endblock %}
+{% block footer %}
+<hr>
+<a href="/">Dusko Snakes</a> covered under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0 DEED</a><br>
+contact Dusan Ulemek at PCC.EDU if any questions or suggestions
+{% endblock %}
+</body>
+</html>

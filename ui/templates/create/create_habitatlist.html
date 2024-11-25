@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+{% block title %}Create New Habitatist{% endblock %}
+{% block header %}Please enter the information to create a new habitatlist(snake habitat):{% endblock %}
+{% block content %}
+    <form method="POST" action="do_create_habitatlist">
+    <table class="data_entry_form">
+        <tr><th><label>Habitat Name:</label></th><td><input type="text" name="habitat_name"></td></tr>
+        <tr><th><label>Geographic Description:</label></th><td><input type="text"
+                                                                      name="geographic_description"></td></tr>
+        <tr><th colspan="2"><button type="submit">CREATE</button></th></tr>
+
+    </table>
+    </form>
+{% endblock %}

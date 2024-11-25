@@ -1,0 +1,18 @@
+{% extends "default.html" %}
+{% block title %}Add a snake to a habitatlist{% endblock %}
+{% block header %}Select a snake to add to a snake habitatlist:{% endblock %}
+{% block content %}
+    <form method="POST" action="do_add_snake_to_habitatlist">
+    <table class="data_entry_form">
+        <tr><th><label>Snake:</label></th><td>
+            {% set select_snake_name= "snake" %}
+            {% include "select_snake.html" %}
+        </td></tr>
+        <tr><th><label>Habitatlist:</label></th><td>
+            {% set select_habitat_name= "habitatlist" %}
+            {% include "select_habitatlist.html" %}
+        </td></tr>
+        <tr><th colspan="2"><button type="submit">ADD</button></th></tr>
+    </table>
+    </form>
+{% endblock %}

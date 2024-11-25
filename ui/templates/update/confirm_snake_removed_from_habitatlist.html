@@ -1,0 +1,7 @@
+{% extends "default.html" %}
+{% block title %}Snake removed from habitatlist{% endblock %}
+{% block header %}Snake was removed from the habitatlist{% endblock %}
+{% block content %}
+    <p>The snake {{ snake.get_printable_key() }} was removed from the habitatlist
+        {{ habitatlist.get_printable_key() }}!</p>
+{% endblock %}

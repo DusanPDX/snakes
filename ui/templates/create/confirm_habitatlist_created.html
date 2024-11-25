@@ -1,0 +1,6 @@
+{% extends "default.html" %}
+{% block title %}Habitatlist named: "{{ habitatlist.get_habitat_name() }}" Created{% endblock %}
+{% block header %}Habitatlist named: "{{ habitatlist.get_habitat_name() }}" Created{% endblock %}
+{% block content %}
+<p>{{ habitatlist.get_geographic_location() }}</p>
+{% endblock %}

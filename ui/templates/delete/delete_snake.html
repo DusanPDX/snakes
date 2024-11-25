@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+{% block title %}Delete a snake{% endblock %}
+{% block header %}Select a snake and delete it:{% endblock %}
+{% block content %}
+    <form method="POST" action="do_delete_snake">
+    <table class="data_entry_form">
+        <tr><th><label>Snake:</label></th><td>
+            {% set select_snake_name= "snake" %}
+            {% include "select_snake.html" %}
+        </td></tr>
+        <tr><th colspan="2"><button type="submit">DELETE</button></th></tr>
+    </table>
+    </form>
+{% endblock %}
